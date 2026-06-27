@@ -1,0 +1,130 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}À propos{% endblock %}
+{% block body_class %}about-page{% endblock %}
+{% block nav_about %}active{% endblock %}
+
+{% block content %}
+<section id="about" class="about section">
+
+  <div class="container section-title" data-aos="fade-up">
+    <h2>À propos</h2>
+    <p>Étudiant en Génie Logiciel, passionné de développement Full-Stack, Mobile et ERP</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4 justify-content-center">
+      <div class="col-lg-4">
+        <img src="{% static 'portfolio/img/profile-img.jpg' %}" class="img-fluid" alt="Photo de profil">
+      </div>
+      <div class="col-lg-8 content">
+        <h2>Développeur Full-Stack &amp; Mobile.</h2>
+        <p class="fst-italic py-3">
+          Étudiant en Licence 2 Génie Logiciel, je conçois des applications web et mobiles complètes,
+          de la base de données à l'interface utilisateur, avec un intérêt particulier pour les projets
+          à impact concret comme l'agriculture, la gestion d'entreprise et les services financiers.
+        </p>
+        <div class="row">
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Niveau d'études :</strong> <span>L2 Génie Logiciel</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>GitHub :</strong> <span>A-urie</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Téléphone :</strong> <span>07 48 53 07 26</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Ville :</strong> <span>Grand-Bassam, Côte d'Ivoire</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Email :</strong> <span>angeuriebadou68@gmail.com</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Domaines :</strong> <span>Web, Mobile, ERP</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Disponibilité :</strong> <span>Stages / projets académiques</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="py-3">
+          Mes projets récents couvrent le scoring de crédit agricole en Flutter (AgriScore), la gestion
+          d'actifs informatiques sous Odoo (it_parc), la billetterie d'événements en Django (EVENTPRO CI)
+          et une plateforme de microfinance (COFINANCE CI). J'aime résoudre des problèmes concrets avec du code propre et structuré.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="skills" class="skills section">
+
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Compétences</h2>
+    <p>Technologies avec lesquelles je travaille au quotidien</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row skills-content skills-animation">
+
+      <div class="col-lg-6">
+
+        <div class="progress">
+          <span class="skill"><span>Flutter / Dart</span> <i class="val">85%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"><span>Django / Python</span> <i class="val">85%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"><span>HTML / CSS / Bootstrap</span> <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="progress">
+          <span class="skill"><span>Odoo (développement modules)</span> <i class="val">75%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"><span>Git / GitHub</span> <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"><span>PostgreSQL / SQLite</span> <i class="val">70%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="progress">
+          <span class="skill"><span>Modélisation (UML / Draw.io)</span> <i class="val">65%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+{% endblock %}

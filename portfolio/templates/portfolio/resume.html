@@ -1,0 +1,93 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}CV{% endblock %}
+{% block body_class %}resume-page{% endblock %}
+{% block nav_resume %}active{% endblock %}
+
+{% block content %}
+<section id="resume" class="resume section">
+
+  <div class="container section-title" data-aos="fade-up">
+    <h2>CV</h2>
+    <p>Formation et projets réalisés</p>
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">Résumé</h3>
+
+        <div class="resume-item pb-0">
+          <h4>Badou Koffi Ange Urie</h4>
+          <p><em>Étudiant en Licence 2 Génie Logiciel, développeur Full-Stack et Mobile. Je conçois des applications web (Django), mobiles (Flutter) et des modules ERP (Odoo) dans le cadre de projets académiques en Côte d'Ivoire.</em></p>
+          <ul>
+            <li>Grand-Bassam, Côte d'Ivoire</li>
+            <li>07 48 53 07 26</li>
+            <li>angeuriebadou68@gmail.com</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-title">Formation</h3>
+        <div class="resume-item">
+          <h4>Licence 2 (L2) Génie Logiciel</h4>
+          <h5>En cours</h5>
+          <p><em>Étudiant en Informatique, spécialisation Génie Logiciel — Côte d'Ivoire</em></p>
+          <p>Formation couvrant le développement web, mobile, les bases de données, l'algorithmique et l'analyse mathématique appliquée à l'informatique.</p>
+        </div>
+
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="resume-title">Projets académiques</h3>
+
+        <div class="resume-item">
+          <h4>AgriScore — Application mobile de scoring agricole</h4>
+          <h5>2025 - 2026</h5>
+          <p><em>Projet personnel / académique — Flutter</em></p>
+          <ul>
+            <li>Application Flutter de scoring de crédit agricole pour la Côte d'Ivoire, avec 5 rôles utilisateurs (agriculteur, agent terrain, coopérative, agent de crédit, administrateur)</li>
+            <li>Architecture complète : modèles, providers, écrans, thème personnalisé</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>EVENTPRO CI — Plateforme de billetterie événementielle</h4>
+          <h5>2025</h5>
+          <p><em>Projet académique — Django REST Framework, Channels</em></p>
+          <ul>
+            <li>API REST avec authentification JWT, WebSockets (Redis, Daphne) pour les notifications en temps réel</li>
+            <li>Modules utilisateurs, événements, billets et notifications</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>it_parc — Module Odoo de gestion de parc informatique</h4>
+          <h5>2025</h5>
+          <p><em>Projet académique — Odoo 18</em></p>
+          <ul>
+            <li>Module complet : 5 modèles, rapports PDF, exports Excel, tableau de bord OWL avec Chart.js</li>
+            <li>Système de tickets avec workflow à 4 états et alertes automatiques</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>COFINANCE CI — Plateforme de microfinance</h4>
+          <h5>2025</h5>
+          <p><em>Projet académique — Django REST Framework</em></p>
+          <ul>
+            <li>7 modules (comptes, crédits, remboursements, assurance, notifications, dashboard, chat)</li>
+            <li>Authentification JWT, chat en temps réel via WebSocket, gestion des rôles client/agent/admin</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}Services{% endblock %}
+{% block body_class %}services-page{% endblock %}
+{% block nav_services %}active{% endblock %}
+
+{% block content %}
+<section id="services" class="services section">
+
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Services</h2>
+    <p>Ce que je peux réaliser pour vos projets académiques ou professionnels</p>
+  </div>
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item item-cyan position-relative">
+          <div class="icon">
+            <i class="bi bi-phone"></i>
+          </div>
+          <a href="{% url 'portfolio:contact' %}" class="stretched-link">
+            <h3>Développement Mobile</h3>
+          </a>
+          <p>Applications Flutter/Dart complètes : architecture, gestion d'état (Provider), design personnalisé, intégration API. Exemple : AgriScore.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item item-orange position-relative">
+          <div class="icon">
+            <i class="bi bi-globe"></i>
+          </div>
+          <a href="{% url 'portfolio:contact' %}" class="stretched-link">
+            <h3>Développement Web</h3>
+          </a>
+          <p>Applications Django REST Framework avec authentification JWT, WebSockets (Channels/Daphne), et API sécurisées. Exemples : EVENTPRO CI, COFINANCE CI.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item item-teal position-relative">
+          <div class="icon">
+            <i class="bi bi-diagram-3"></i>
+          </div>
+          <a href="{% url 'portfolio:contact' %}" class="stretched-link">
+            <h3>Personnalisation ERP (Odoo)</h3>
+          </a>
+          <p>Modules Odoo sur mesure : modèles métier, rapports PDF (QWeb), exports Excel, tableaux de bord OWL, workflows et automatisations. Exemple : it_parc.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item item-red position-relative">
+          <div class="icon">
+            <i class="bi bi-database"></i>
+          </div>
+          <a href="{% url 'portfolio:contact' %}" class="stretched-link">
+            <h3>Conception de bases de données</h3>
+          </a>
+          <p>Modélisation et structuration de données relationnelles (PostgreSQL, SQLite) adaptées aux besoins métier de chaque projet.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item item-indigo position-relative">
+          <div class="icon">
+            <i class="bi bi-plug"></i>
+          </div>
+          <a href="{% url 'portfolio:contact' %}" class="stretched-link">
+            <h3>Intégration temps réel</h3>
+          </a>
+          <p>Mise en place de fonctionnalités temps réel : chat, notifications instantanées via WebSockets et Redis.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item item-pink position-relative">
+          <div class="icon">
+            <i class="bi bi-bug"></i>
+          </div>
+          <a href="{% url 'portfolio:contact' %}" class="stretched-link">
+            <h3>Débogage &amp; maintenance</h3>
+          </a>
+          <p>Correction de bugs, résolution de conflits de build, optimisation de configuration (Flutter, Django, Odoo) et revue de code.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+{% endblock %}
