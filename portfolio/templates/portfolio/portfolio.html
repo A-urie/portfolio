@@ -1,0 +1,55 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}Portfolio{% endblock %}
+{% block body_class %}portfolio-page{% endblock %}
+{% block nav_portfolio %}active{% endblock %}
+
+{% block content %}
+<section id="portfolio" class="portfolio section">
+
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portfolio</h2>
+    <p>Mes projets académiques : applications mobiles, web et modules ERP</p>
+  </div>
+
+  <div class="container">
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">Tous</li>
+        <li data-filter=".filter-mobile">Mobile</li>
+        <li data-filter=".filter-web">Web</li>
+        <li data-filter=".filter-erp">ERP</li>
+      </ul>
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        {% for project in projects %}
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{ project.category }}">
+          {% if project.thumbnail %}
+            <img src="{{ project.thumbnail.url }}" class="img-fluid" alt="{{ project.title }}">
+          {% else %}
+            <img src="{% static 'portfolio/img/hero-bg.jpg' %}" class="img-fluid" alt="{{ project.title }}">
+          {% endif %}
+          <div class="portfolio-info">
+            <h4>{{ project.title }}</h4>
+            <p>{{ project.short_description }}</p>
+            <a href="{% url 'portfolio:project_detail' project.slug %}" title="Voir les détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div>
+        {% empty %}
+        <div class="col-12 text-center">
+          <p>Aucun projet pour le moment. Ajoute-les depuis l'admin Django.</p>
+        </div>
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+{% endblock %}
