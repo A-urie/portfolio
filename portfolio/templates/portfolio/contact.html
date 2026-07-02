@@ -1,0 +1,99 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+{% block body_class %}contact-page{% endblock %}
+{% block nav_contact %}active{% endblock %}
+
+{% block content %}
+<section id="contact" class="contact section">
+
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Une question, une proposition de stage ou de projet ? Écris-moi.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-5">
+
+        <div class="info-wrap">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Adresse</h3>
+              <p>Grand-Bassam, Côte d'Ivoire</p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Téléphone</h3>
+              <p>07 48 53 07 26</p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email</h3>
+              <p>angeuriebadou68@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+            <i class="bi bi-github flex-shrink-0"></i>
+            <div>
+              <h3>GitHub</h3>
+              <p><a href="https://github.com/A-urie" target="_blank">github.com/A-urie</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <form method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+          {% csrf_token %}
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+              <label for="{{ form.name.id_for_label }}" class="pb-2">Votre nom</label>
+              {{ form.name }}
+              {% if form.name.errors %}<div class="error-message d-block">{{ form.name.errors.0 }}</div>{% endif %}
+            </div>
+
+            <div class="col-md-6">
+              <label for="{{ form.email.id_for_label }}" class="pb-2">Votre email</label>
+              {{ form.email }}
+              {% if form.email.errors %}<div class="error-message d-block">{{ form.email.errors.0 }}</div>{% endif %}
+            </div>
+
+            <div class="col-md-12">
+              <label for="{{ form.subject.id_for_label }}" class="pb-2">Sujet</label>
+              {{ form.subject }}
+              {% if form.subject.errors %}<div class="error-message d-block">{{ form.subject.errors.0 }}</div>{% endif %}
+            </div>
+
+            <div class="col-md-12">
+              <label for="{{ form.message.id_for_label }}" class="pb-2">Message</label>
+              {{ form.message }}
+              {% if form.message.errors %}<div class="error-message d-block">{{ form.message.errors.0 }}</div>{% endif %}
+            </div>
+
+            <div class="col-md-12 text-center">
+              <button type="submit">Envoyer le message</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+{% endblock %}
