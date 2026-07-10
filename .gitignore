@@ -1,0 +1,21 @@
+# Environnement virtuel
+venv/
+
+# Variables d'environnement (secrets)
+.env
+
+# Base de données
+db.sqlite3
+
+# Fichiers Python compilés
+__pycache__/
+*.pyc
+
+# Fichiers statiques collectés (production)
+staticfiles/
+
+# Médias uploadés (optionnel, à toi de voir)
+media/
+
+# VS Code
+.vscode/
