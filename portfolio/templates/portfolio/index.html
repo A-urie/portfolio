@@ -1,0 +1,24 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}Accueil{% endblock %}
+{% block body_class %}index-page{% endblock %}
+{% block nav_home %}active{% endblock %}
+
+{% block content %}
+<section id="hero" class="hero section">
+
+  <img src="{% static 'portfolio/img/hero-bg.jpg' %}" alt="" data-aos="fade-in">
+
+  <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2>Badou Koffi Ange Urie</h2>
+        <p>Étudiant en Génie Logiciel (L2) — Développeur Full-Stack &amp; Mobile à Grand-Bassam, Côte d'Ivoire</p>
+        <a href="{% url 'portfolio:about' %}" class="btn-get-started">À propos de moi</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+{% endblock %}
