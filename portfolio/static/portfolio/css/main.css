@@ -1421,3 +1421,42 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Style personnalisé du nom dans la navbar
+--------------------------------------------------------------*/
+.header .logo .sitename {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  position: relative;
+  background: linear-gradient(120deg, #0dcaa6 0%, #0a8f7a 45%, #0f5c6b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: letter-spacing 0.3s ease;
+}
+
+.header .logo .sitename::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-top: 4px;
+  background: linear-gradient(90deg, #0dcaa6, #0f5c6b);
+  border-radius: 2px;
+}
+
+.header .logo:hover .sitename {
+  letter-spacing: 6px;
+}
+
+.header .logo .logo-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  margin-right: 10px;
+  box-shadow: 0 2px 8px rgba(13, 202, 166, 0.35);
+}
