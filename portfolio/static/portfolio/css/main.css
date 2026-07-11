@@ -502,8 +502,8 @@ h6 {
 }
 
 .footer .credits {
-  margin-top: 10px;
-  font-size: 13px;
+  margin-top: 8px;
+  font-size: 10px;
   text-align: center;
 }
 
@@ -1418,9 +1418,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
 
 /*--------------------------------------------------------------
 # Style personnalisé du nom dans la navbar
