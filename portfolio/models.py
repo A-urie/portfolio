@@ -7,10 +7,11 @@ from django.urls import reverse
 
 class Project(models.Model):
     CATEGORY_CHOICES = [
-        ('mobile', 'Mobile'),
-        ('web', 'Web'),
-        ('erp', 'ERP'),
-    ]
+    ('mobile', 'Mobile'),
+    ('web', 'Web'),
+    ('erp', 'ERP'),
+    ('desktop', 'Desktop'),
+]
 
     title = models.CharField('Titre', max_length=100)
     slug = models.SlugField('Slug', unique=True, help_text="Utilisé dans l'URL, ex: agriscore")
