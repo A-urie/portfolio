@@ -63,11 +63,13 @@ def contact(request):
                     },
                     timeout=10,
                 )
+                print("BREVO STATUS:", response.status_code)
+                print("BREVO BODY:", response.text)
                 response.raise_for_status()
                 messages.success(request, "Votre message a bien été envoyé. Merci !")
-            except requests.RequestException:
+            except requests.RequestException as e:
+                print("BREVO ERROR:", str(e))
                 messages.error(request, "Une erreur est survenue lors de l'envoi. Réessayez plus tard.")
-
             return redirect('portfolio:contact')
     else:
         form = ContactForm()
