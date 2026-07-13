@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-i0hr*fsl=yk09ylpxmz2fa2e-*nhx!zwe3wc28%z73_gta#ho3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['urie.pythonanywhere.com']
+ALLOWED_HOSTS = ['urie.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -128,7 +128,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 # Configuration email (Gmail SMTP)
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp-relay.brevo.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
