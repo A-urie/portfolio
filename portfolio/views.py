@@ -1,6 +1,7 @@
+import os
+import requests
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from django.core.mail import send_mail
 from django.conf import settings
 from .models import Project
 from .forms import ContactForm
@@ -45,14 +46,28 @@ def contact(request):
 
             full_message = f"De : {name} <{email}>\n\n{message}"
 
-            send_mail(
-                subject=f"[Portfolio] {subject}",
-                message=full_message,
-                from_email=email,
-                recipient_list=[settings.CONTACT_EMAIL],
-                fail_silently=False,
-            )
-            messages.success(request, "Votre message a bien été envoyé. Merci !")
+            try:
+                response = requests.post(
+                    'https://api.brevo.com/v3/smtp/email',
+                    headers={
+                        'accept': 'application/json',
+                        'api-key': os.environ.get('BREVO_API_KEY'),
+                        'content-type': 'application/json',
+                    },
+                    json={
+                        'sender': {'name': 'Portfolio Urie', 'email': 'angeuriebadou68@gmail.com'},
+                        'to': [{'email': settings.CONTACT_EMAIL}],
+                        'replyTo': {'email': email, 'name': name},
+                        'subject': f"[Portfolio] {subject}",
+                        'textContent': full_message,
+                    },
+                    timeout=10,
+                )
+                response.raise_for_status()
+                messages.success(request, "Votre message a bien été envoyé. Merci !")
+            except requests.RequestException:
+                messages.error(request, "Une erreur est survenue lors de l'envoi. Réessayez plus tard.")
+
             return redirect('portfolio:contact')
     else:
         form = ContactForm()
